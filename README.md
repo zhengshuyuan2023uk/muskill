@@ -11,4 +11,12 @@
 
 在支持 skills 的工具中加载所需目录，或直接阅读对应的 `SKILL.md`。
 
-`cartoon-audio-short` 当前仅包含指令文件。文中引用的 `kit/` 渲染工具包尚未提供，因此无法仅凭本仓库直接运行完整的 MP4 制作流程；需要另行补齐工具包和运行环境。
+`cartoon-audio-short` 已附用户提供的 [cartoon-short-kit 工具包](cartoon-audio-short/kit/)，包含引擎、制作工具和 soldier 示例。工具包按原文件保存。
+
+当前仍有以下运行限制：
+
+- 缺少 skill 要求的 `mix.py` 混音脚本。
+- Three.js 与 `toon.ts` 由初始化脚本联网获取；运行环境需另行准备。
+- 初始化脚本未将 `finish.sh` 复制到项目目录，并会向 `kit/vendor/` 写入文件，与 skill 中的部分说明尚不一致。
+
+本次仅核对文件完整性，未执行初始化或视频渲染流程。
